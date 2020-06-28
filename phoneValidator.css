@@ -1,0 +1,100 @@
+
+body{
+    background-color:#262626;
+    font-family: 'Oxanium', cursive;
+    margin: 0;
+}
+
+h1{
+text-transform: uppercase;
+}
+
+.bg{
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, red 50%, #3c3b6e 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+.logic{
+    background-color:rgba(255,255,255,.9);
+    border-radius:30px;
+    left:50%;
+    padding:10vmin;
+    position:fixed;
+    text-align:center;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+.logicContents{
+    position: relative;
+    align-items: center;
+    vertical-align: center;
+}
+
+
+
+button{
+    background-color: #262626;
+    border: 2px solid #262626;
+    color: white;
+}
+
+
+
+
+
+
+
+
+#fail, #pass{
+    display: none;
+}
+
+
+#results{
+   font-size: 0.75rem; 
+}
+
+.passed #pass{
+    display: block;
+    color:#02a80e;
+}
+
+.passed #fail{
+    display: none;
+}
+
+.failed #pass{
+    display: none;
+}
+
+.failed #fail{
+    color: red;
+    display: block;
+}
+
